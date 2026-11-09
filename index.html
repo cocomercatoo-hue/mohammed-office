@@ -1,159 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إمبراطورية موسى - مكتب الذكاء الاصطناعي</title>
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: #111827;
-            --accent-color: #10b981;
-            --text-color: #f3f4f6;
-            --border-color: #1f2937;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 15px;
-        }
-
-        .office-header {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .office-header h2 { margin: 0; color: var(--accent-color); font-size: 1.1rem; }
-        .stats-box { background: #065f46; color: #fff; padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            background-color: var(--accent-color);
-            color: #000;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
-            font-size: 1rem;
-        }
-
-        .btn:active { opacity: 0.8; }
-
-        .design-box {
-            background: #1f2937;
-            border: 2px dashed var(--accent-color);
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            text-align: right;
-        }
-
-        .design-title { font-size: 1.1rem; font-weight: bold; color: #34d399; }
-        .info-text { font-size: 0.85rem; color: #9ca3af; margin-top: 5px; }
-        
-        .tags-box {
-            background: #0f172a;
-            padding: 8px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 0.75rem;
-            color: #38bdf8;
-            margin-top: 5px;
-            word-break: break-all;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <title>مكتب موسى — لوحة المشاريع</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1020;--surface:#111a2b;--surface-2:#172238;--line:#25334a;--text:#f4f7fc;--muted:#9aa9bf;--mint:#66e0b2;--blue:#8ebcff;--amber:#f6c66b;--red:#ff8792;--radius:20px;--shadow:0 18px 48px #02061766}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 90% 0%,#163d3b55,transparent 36%),radial-gradient(ellipse at 5% 30%,#273c7650,transparent 30%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.6}button{font:inherit}.shell{width:min(1120px,100% - 32px);margin:auto;padding:30px 0 56px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:13px}.logo{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#66e0b2,#3da9bd);color:#082019;font-size:1.35rem;font-weight:900;box-shadow:0 8px 26px #45d6b044}.brand h1{font-size:1.12rem;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:.84rem}.demo-pill,.status{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:6px 11px;font-size:.76rem;font-weight:750}.demo-pill{border:1px solid #f6c66b55;color:var(--amber);background:#f6c66b12;white-space:nowrap}.hero{position:relative;overflow:hidden;padding:clamp(22px,5vw,42px);border:1px solid #ffffff13;border-radius:28px;background:linear-gradient(115deg,#182a3ce8,#111b2be8 65%,#142d31e8);box-shadow:var(--shadow);margin-bottom:20px}.hero:after{content:"✦";position:absolute;left:8%;top:-54px;font-size:210px;color:#66e0b20b;pointer-events:none}.hero-copy{position:relative;z-index:1;max-width:680px}.eyebrow{color:var(--mint);font-size:.83rem;font-weight:800;letter-spacing:.02em}.hero h2{font-size:clamp(1.7rem,5vw,2.7rem);line-height:1.25;margin:8px 0 12px}.hero p{color:#b4c0d2;margin:0 0 21px;max-width:590px}.actions{display:flex;flex-wrap:wrap;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:12px;padding:11px 16px;font-weight:800;cursor:pointer;transition:transform .16s ease,filter .16s ease,border-color .16s ease}.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.btn:focus-visible,.filter:focus-visible{outline:3px solid #8ebcff;outline-offset:3px}.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}.primary{background:var(--mint);color:#082019}.secondary{background:#ffffff0b;color:var(--text);border-color:#ffffff20}.danger{background:#ff879214;color:var(--red);border-color:#ff879244}.small{padding:8px 11px;font-size:.84rem}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:22px}.stat{padding:17px 19px;border-radius:17px;border:1px solid var(--line);background:#111a2bd9}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.82rem}.stat-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#ffffff0b;font-size:1rem}.stat strong{display:block;font-size:1.8rem;line-height:1.3;margin-top:8px}.stat:nth-child(1) strong{color:var(--blue)}.stat:nth-child(2) strong{color:var(--mint)}.stat:nth-child(3) strong{color:var(--amber)}.section-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:28px 0 13px}.section-head h2{font-size:1.15rem;margin:0}.section-head p{margin:3px 0 0;color:var(--muted);font-size:.84rem}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:16px;background:#111a2b;margin-bottom:14px}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{color:var(--muted);border:1px solid transparent;background:transparent;border-radius:10px;padding:7px 12px;cursor:pointer}.filter[aria-pressed="true"]{color:var(--text);border-color:#66e0b255;background:#66e0b214}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.project{padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151f31,#111a2a);box-shadow:0 8px 24px #02061725;min-width:0}.project-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.project h3{margin:0;font-size:1.08rem;direction:ltr;text-align:right}.status.review{color:var(--amber);background:#f6c66b14;border:1px solid #f6c66b30}.status.published{color:var(--mint);background:#66e0b214;border:1px solid #66e0b230}.project-desc{color:#b5c1d2;font-size:.9rem;margin:12px 0}.tag-label{font-size:.75rem;color:var(--muted);margin-bottom:6px}.tags{display:flex;flex-wrap:wrap;gap:6px;direction:ltr;justify-content:flex-end}.tag{border:1px solid #8ebcff2b;background:#8ebcff0d;color:#b9d5ff;padding:4px 8px;border-radius:8px;font-size:.73rem}.project-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #ffffff0d;margin-top:15px;padding-top:12px;color:var(--muted);font-size:.75rem}.project-actions{display:flex;gap:7px;flex-wrap:wrap}.empty{grid-column:1/-1;text-align:center;padding:42px 18px;border:1px dashed #35445c;border-radius:18px;background:#111a2a88}.empty-icon{font-size:2rem}.empty h3{margin:8px 0 3px}.empty p{color:var(--muted);margin:0 0 15px;font-size:.9rem}.notice{margin-top:22px;padding:13px 15px;border:1px solid #8ebcff25;border-radius:14px;background:#8ebcff0a;color:#aab8cc;font-size:.8rem}.notice strong{color:var(--blue)}.toast{position:fixed;bottom:20px;left:20px;z-index:5;max-width:min(420px,calc(100% - 40px));padding:12px 16px;background:#172238;border:1px solid #66e0b255;border-radius:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}
+    @media(max-width:680px){.shell{width:min(100% - 22px,1120px);padding-top:18px}.topbar{align-items:flex-start}.demo-pill{font-size:.68rem;padding:5px 8px}.brand p{max-width:210px}.stats{gap:8px}.stat{padding:12px}.stat-top{font-size:.72rem}.stat-icon{width:29px;height:29px}.stat strong{font-size:1.5rem}.project-grid{grid-template-columns:1fr}.toolbar{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start}.hero{border-radius:22px}}
+    @media(max-width:390px){.stats{grid-template-columns:1fr}.stat{display:flex;align-items:center;justify-content:space-between}.stat strong{margin:0}.topbar{gap:8px}.logo{width:42px;height:42px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
 </head>
 <body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><div class="logo" aria-hidden="true">م</div><div><h1>مكتب موسى</h1><p>مساحة منظّمة لأفكار ومشاريع المنتجات</p></div></div>
+      <span class="demo-pill">● نسخة تجريبية</span>
+    </header>
 
-    <div class="office-header">
-        <div>
-            <h2>🏢 مكتب المدير موسى</h2>
-            <small style="color: #9ca3af;">عمال الذكاء الاصطناعي في الخدمة</small>
+    <section class="hero" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <span class="eyebrow">لوحة إدارة المشاريع</span>
+        <h2 id="welcome-title">أفكارك تبدأ هنا،<br>والقرار الأخير لك.</h2>
+        <p>أنشئ فكرة جديدة من مكتبة الاقتراحات، راجع تفاصيلها، ثم علّمها كمنشورة عندما تنتهي من تنفيذها.</p>
+        <div class="actions">
+          <button class="btn primary" id="generateBtn" type="button">✦ اقترح مشروعاً جديداً</button>
+          <button class="btn secondary" id="resetBtn" type="button">إعادة ضبط البيانات</button>
         </div>
-        <div class="stats-box">📊 المشاريع المنشورة: <span id="pubCount">0</span></div>
-    </div>
+      </div>
+    </section>
 
-    <!-- لوحة التحكم -->
-    <div class="card">
-        <h3>🤖 فريق العمل (الذكاء الاصطناعي)</h3>
-        <p style="font-size: 0.85rem; color: #9ca3af;">اضغط هنا باش العمال يصوبوا ليك تصميم جديد ويحطوه في مكتبك:</p>
-        <button class="btn" onclick="generateProject()">طلب تصميم جديد من العمال ⚡</button>
-    </div>
+    <section class="stats" aria-label="إحصائيات المشاريع">
+      <article class="stat"><div class="stat-top"><span>كل المشاريع</span><span class="stat-icon" aria-hidden="true">▤</span></div><strong id="totalCount">0</strong></article>
+      <article class="stat"><div class="stat-top"><span>بانتظار المراجعة</span><span class="stat-icon" aria-hidden="true">◷</span></div><strong id="reviewCount">0</strong></article>
+      <article class="stat"><div class="stat-top"><span>معلّمة كمنشورة</span><span class="stat-icon" aria-hidden="true">✓</span></div><strong id="publishedCount">0</strong></article>
+    </section>
 
-    <!-- صندوق الوارد -->
-    <h3>📁 صندوق مراجعة المشاريع (أنت من تحكم في النشر)</h3>
-    <div id="officeInbox">
-        <p style="text-align: center; color: #6b7280; padding: 20px;">المكتب فارغ حالياً. اطلب من العمال تصميم مشروع جديد!</p>
-    </div>
+    <section aria-labelledby="inbox-title">
+      <div class="section-head"><div><h2 id="inbox-title">صندوق المشاريع</h2><p>راجع المقترحات وأدر حالتها من مكان واحد.</p></div></div>
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="تصفية المشاريع">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">الكل</button>
+          <button class="filter" type="button" data-filter="review" aria-pressed="false">قيد المراجعة</button>
+          <button class="filter" type="button" data-filter="published" aria-pressed="false">منشورة</button>
+        </div>
+        <span id="shownCount" style="color:var(--muted);font-size:.8rem"></span>
+      </div>
+      <div id="projectGrid" class="project-grid" aria-live="polite"></div>
+    </section>
 
-    <script>
-        let pubCount = localStorage.getItem('mousa_projects') ? parseInt(localStorage.getItem('mousa_projects')) : 0;
-        document.getElementById('pubCount').innerText = pubCount;
+    <aside class="notice"><strong>تنويه:</strong> الاقتراحات تُختار عشوائياً من قائمة مضمّنة في الصفحة. لا يوجد اتصال بعمال ذكاء اصطناعي أو خدمة نشر فعلية؛ حالة «منشور» للتنظيم فقط، والبيانات محفوظة في هذا المتصفح.</aside>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-        const projectsDatabase = [
-            { title: "Coffee Is My Therapy", tags: "coffee lover, funny coffee quote, cute coffee cup, caffeine addict", desc: "تصميم خاص بعشاق القهوة، مطلوب بكثرة على التيشرتات والأكواب." },
-            { title: "Code Sleep Repeat", tags: "programmer gift, coder life, developer tee, software engineering", desc: "تصميم عصري مخصص للمبرمجين والتقنيين." },
-            { title: "Plant Mom Vibes", tags: "plant lover, botanical, cute plants, nature aesthetic", desc: "تصميم أنيق لعشاق النباتات المنزلية والزهور." },
-            { title: "Bookworm Loading...", tags: "reading lover, bookish merch, cute library, reader gift", desc: "تصميم فريد ومحبوب لدى عشاق القراءة والكتب." },
-            { title: "Good Vibes Only", tags: "positive energy, aesthetic typography, cute quote, motivational tee", desc: "تصميم تحفيزي إيجابي يناسب التيشرتات والأكواب." }
-        ];
+  <script>
+    (() => {
+      const STORAGE_KEY = 'mousa-office-projects-v2';
+      const projectsDatabase = [
+        { title: 'Coffee Is My Therapy', tags: ['coffee lover', 'funny coffee quote', 'cute coffee cup', 'caffeine addict'], desc: 'فكرة لعشاق القهوة، مناسبة لتصميمات الأكواب والملابس.' },
+        { title: 'Code Sleep Repeat', tags: ['programmer gift', 'coder life', 'developer tee', 'software engineering'], desc: 'فكرة مرحة لمحبي البرمجة والتقنية.' },
+        { title: 'Plant Mom Vibes', tags: ['plant lover', 'botanical', 'cute plants', 'nature aesthetic'], desc: 'فكرة هادئة لعشاق النباتات المنزلية والطبيعة.' },
+        { title: 'Bookworm Loading...', tags: ['reading lover', 'bookish merch', 'cute library', 'reader gift'], desc: 'فكرة لمحبي القراءة والكتب والمكتبات.' },
+        { title: 'Good Vibes Only', tags: ['positive energy', 'aesthetic typography', 'cute quote', 'motivational tee'], desc: 'عبارة إيجابية مناسبة لتصميمات الملابس والأكواب.' },
+        { title: 'Weekend Hiking Club', tags: ['hiking gift', 'outdoor adventure', 'mountain lover', 'trail life'], desc: 'فكرة لمحبي المشي في الطبيعة والرحلات الجبلية.' },
+        { title: 'Tiny Garden Big Dreams', tags: ['gardening gift', 'plant parent', 'garden lover', 'green thumb'], desc: 'تصميم لطيف لهواة الزراعة والحدائق الصغيرة.' },
+        { title: 'Offline Is The New Luxury', tags: ['digital detox', 'slow living', 'weekend mood', 'mindful living'], desc: 'فكرة عصرية تشجع على الاسترخاء والابتعاد عن الشاشات.' }
+      ];
+      const grid = document.getElementById('projectGrid');
+      const filterButtons = [...document.querySelectorAll('[data-filter]')];
+      let activeFilter = 'all';
+      let toastTimer;
 
-        function generateProject() {
-            const randomProj = projectsDatabase[Math.floor(Math.random() * projectsDatabase.length)];
-            const inbox = document.getElementById('officeInbox');
-            
-            if(inbox.querySelector('p')) {
-                inbox.innerHTML = '';
-            }
-
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.style.border = "2px solid #3b82f6";
-            card.innerHTML = `
-                <span style="background: #1f2937; color: #60a5fa; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem;">👷‍♂️ العمال أنهوا هذا المشروع</span>
-                <div class="design-box">
-                    <div class="design-title">🎨 العنوان: "${randomProj.title}"</div>
-                    <div class="info-text"><strong>الوصف:</strong> ${randomProj.desc}</div>
-                    <div class="info-text" style="margin-top: 8px;"><strong>الكلمات المفتاحية (Tags):</strong></div>
-                    <div class="tags-box">${randomProj.tags}</div>
-                </div>
-                <button class="btn" style="background-color: #2563eb; color: #fff;" onclick="publishProject(this)">🚀 الموافقة والنشر (أنت المتحكم)</button>
-            `;
-
-            inbox.prepend(card);
+      function readProjects() {
+        try {
+          const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+          if (Array.isArray(parsed)) return parsed.filter(p => p && typeof p.id === 'string' && typeof p.title === 'string' && Array.isArray(p.tags));
+        } catch (error) { console.warn('تعذر قراءة المشاريع المحفوظة.', error); }
+        return [];
+      }
+      let projects = readProjects();
+      function persist() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(projects)); }
+        catch (error) { showToast('تعذر حفظ البيانات. تحقق من مساحة التخزين في المتصفح.'); }
+      }
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+      }
+      function makeElement(tag, className, text) {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        if (text !== undefined) element.textContent = text;
+        return element;
+      }
+      function render() {
+        const review = projects.filter(p => p.status === 'review').length;
+        const published = projects.filter(p => p.status === 'published').length;
+        document.getElementById('totalCount').textContent = projects.length;
+        document.getElementById('reviewCount').textContent = review;
+        document.getElementById('publishedCount').textContent = published;
+        const visible = projects.filter(p => activeFilter === 'all' || p.status === activeFilter);
+        document.getElementById('shownCount').textContent = `${visible.length} مشروع`;
+        grid.replaceChildren();
+        if (!visible.length) {
+          const empty = makeElement('div', 'empty');
+          empty.append(makeElement('div', 'empty-icon', activeFilter === 'published' ? '✓' : '✦'));
+          empty.append(makeElement('h3', '', activeFilter === 'published' ? 'لا توجد مشاريع منشورة بعد' : activeFilter === 'review' ? 'لا توجد مشاريع قيد المراجعة' : 'ابدأ بأول فكرة'));
+          empty.append(makeElement('p', '', activeFilter === 'all' ? 'اطلب اقتراحاً جديداً لتظهر بطاقته هنا.' : 'جرّب تصفية أخرى أو أضف مشروعاً جديداً.'));
+          if (activeFilter !== 'published') {
+            const add = makeElement('button', 'btn primary small', '✦ اقترح مشروعاً');
+            add.type = 'button'; add.addEventListener('click', generateProject); empty.append(add);
+          }
+          grid.append(empty);
+          return;
         }
-
-        function publishProject(btn) {
-            btn.innerText = "✅ تم النشر بنجاح!";
-            btn.style.backgroundColor = "#059669";
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                pubCount += 1;
-                localStorage.setItem('mousa_projects', pubCount);
-                document.getElementById('pubCount').innerText = pubCount;
-                alert("ممتاز يا سي موسى! تم تأكيد ونشر المشروع في مكتبك بنجاح 🥳");
-            }, 400);
-        }
-    </script>
+        [...visible].reverse().forEach(project => {
+          const card = makeElement('article', 'project');
+          const top = makeElement('div', 'project-top');
+          top.append(makeElement('h3', '', project.title));
+          top.append(makeElement('span', `status ${project.status}`, project.status === 'published' ? '✓ معلّمة كمنشورة' : '◷ قيد المراجعة'));
+          card.append(top, makeElement('p', 'project-desc', project.desc));
+          card.append(makeElement('div', 'tag-label', 'الكلمات المفتاحية'));
+          const tags = makeElement('div', 'tags');
+          project.tags.forEach(tag => tags.append(makeElement('span', 'tag', tag)));
+          card.append(tags);
+          const meta = makeElement('div', 'project-meta');
+          const date = project.createdAt ? new Date(project.createdAt) : null;
+          meta.append(makeElement('span', '', date && !Number.isNaN(date.valueOf()) ? date.toLocaleDateString('ar') : 'مشروع محفوظ'));
+          const controls = makeElement('div', 'project-actions');
+          if (project.status === 'review') {
+            const publish = makeElement('button', 'btn primary small', '✓ تم التنفيذ');
+            publish.type = 'button'; publish.setAttribute('aria-label', `تغيير حالة ${project.title} إلى منشور`);
+            publish.addEventListener('click', () => updateStatus(project.id, 'published'));
+            controls.append(publish);
+          } else {
+            const undo = makeElement('button', 'btn secondary small', 'إرجاع للمراجعة');
+            undo.type = 'button'; undo.addEventListener('click', () => updateStatus(project.id, 'review'));
+            controls.append(undo);
+          }
+          const remove = makeElement('button', 'btn danger small', 'حذف');
+          remove.type = 'button'; remove.setAttribute('aria-label', `حذف ${project.title}`);
+          remove.addEventListener('click', () => deleteProject(project.id));
+          controls.append(remove); meta.append(controls); card.append(meta); grid.append(card);
+        });
+      }
+      function generateProject() {
+        const idea = projectsDatabase[Math.floor(Math.random() * projectsDatabase.length)];
+        projects.push({ ...idea, tags: [...idea.tags], id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, status: 'review', createdAt: new Date().toISOString() });
+        activeFilter = 'all';
+        filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === 'all')));
+        persist(); render(); showToast('تمت إضافة اقتراح جديد إلى صندوق المشاريع.');
+      }
+      function updateStatus(id, status) {
+        projects = projects.map(project => project.id === id ? { ...project, status } : project);
+        persist(); render(); showToast(status === 'published' ? 'تم تحديث حالة المشروع. هذا ليس نشراً فعلياً.' : 'أُعيد المشروع إلى قائمة المراجعة.');
+      }
+      function deleteProject(id) {
+        const project = projects.find(item => item.id === id);
+        if (!project || !window.confirm(`هل تريد حذف «${project.title}»؟`)) return;
+        projects = projects.filter(item => item.id !== id);
+        persist(); render(); showToast('تم حذف المشروع.');
+      }
+      document.getElementById('generateBtn').addEventListener('click', generateProject);
+      document.getElementById('resetBtn').addEventListener('click', () => {
+        if (!projects.length) { showToast('لا توجد بيانات لإعادة ضبطها.'); return; }
+        if (!window.confirm('سيتم حذف جميع المشاريع المحفوظة في هذا المتصفح. هل تريد المتابعة؟')) return;
+        projects = []; persist(); render(); showToast('تمت إعادة ضبط قائمة المشاريع.');
+      });
+      filterButtons.forEach(button => button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        render();
+      }));
+      render();
+    })();
+  </script>
 </body>
 </html>
